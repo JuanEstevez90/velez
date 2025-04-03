@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa con Sonidos</title>
+</head>
+<body>
+    <h1>Mapa de Sonidos</h1>
+    <!-- La imagen del mapa -->
+    <img src="1635216165907.png" usemap="#soundmap" alt="Mapa interactivo">
+
+    <!-- Definir las áreas clicables -->
+    <map name="soundmap">
+        <!-- Área poligonal con tus coordenadas -->
+        <area shape="poly" coords="274,81,338,129,303,212,265,195,242,171" href="#" onclick="playSound('Velez.mp3')">
+    </map>
+
+    <!-- El reproductor de audio (oculto) -->
+    <audio id="player" src=""></audio>
+
+    <!-- JavaScript para reproducir el sonido -->
+    <script>
+        function playSound(soundFile) {
+            let player = document.getElementById("player");
+            player.src = soundFile;
+            player.play();
+        }
+    </script>
+</body>
+</html>
